@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css?family=Play');
+
+.TodoList{
+    width: 1000px;
+    margin: 20px auto;
+}
+.TodoList::after{
+ content:"";
+ display: block;
+ height: 0;
+ clear: both;
+}
+.TodoList ol {
+list-style-type: none;
+list-style-type: decimal !ie; 
+margin: 0;
+margin-left: 1em;
+padding: 0;
+counter-reset: li-counter;
+}
+.TodoList ol li{
+position: relative;
+margin-bottom: 1.5em;
+padding: 0.5em;
+background-color: #F0D756;
+padding-left: 58px;
+}
+
+.TodoList a{
+text-decoration:none;
+color:black;
+font-size:15px;
+font-family: 'Play';
+}
+
+.TodoList li:hover{
+box-shadow:inset -1em 0 #6CD6CC;
+transition: box-shadow 0.5s;
+}
+
+.TodoList ol li:before {
+position: absolute;
+top: -0.3em;
+left: -0.5em;
+width: 1.8em;
+height: 1.2em;
+font-size: 2em;
+line-height: 1.2;
+font-weight: bold;
+text-align: center;
+color: white;
+background-color: #6CD6CC;
+transform: rotate(-20deg);
+z-index: 99;
+overflow: hidden;
+content: counter(li-counter);
+counter-increment: li-counter;
+}
+
+.TodoList button {
+    border: 0.1em #333336 solid;
+    border-radius: 0.2em;
+    text-decoration: none;
+    color: black;
+    padding: 0.5em 1em;
+    background-color: #f3f3f3;
+}

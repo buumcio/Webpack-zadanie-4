@@ -1,0 +1,8 @@
+@import url('https://fonts.googleapis.com/css?family=Play');
+
+.Title {
+	font-family: 'Play';
+	width: 1000px;
+	float:left;
+	text-align: center;
+}
