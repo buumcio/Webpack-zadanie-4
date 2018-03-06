@@ -2,9 +2,9 @@ import React from 'react';
 import style from './TodoList.css';
 import Todo from './Todo';
 
-const TodoList = ({todos, remove}) => {
+const TodoList = ({todos, removeTodo}) => {
     const taskList = todos.map((todo) => {
-        return (<Todo todo={todo} key={todo.id} remove={remove} />)
+        return (<Todo todo={todo} key={todo.id} remove={removeTodo} />)
     });
 
     return (
